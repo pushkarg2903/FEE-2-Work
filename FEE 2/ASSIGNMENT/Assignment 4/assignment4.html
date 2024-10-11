@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chessboard</title>
+</head>
+<body>
+    <script>
+        function print(data) {
+            let label = document.createElement('span');
+            label.textContent = data;
+            document.body.appendChild(label);
+        }
+
+        function newLine() {
+            let br = document.createElement('br');
+            document.body.appendChild(br);
+        }
+
+        let board_size = 8; // You can change this value to create a different size chessboard
+
+        function createChessboard(board_size) {
+            for (let i = 0; i < board_size; i++) {
+                for (let j = 0; j < board_size; j++) {
+                    if ((i + j) % 2 === 0) {
+                        print('*'); // White square
+                    } else {
+                        print('#'); // Black square
+                    }
+                }
+                newLine();
+            }
+        }
+
+        // Example usage:
+        createChessboard(board_size);
+    </script>
+</body>
+</html>

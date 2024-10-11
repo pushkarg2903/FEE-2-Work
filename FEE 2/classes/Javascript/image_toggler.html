@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Toggler</title>
+</head>
+
+<body>
+    <h1>Image Toggler</h1>
+
+    <img src="https://images.unsplash.com/photo-1608272841063-67f50df421c3?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="">
+
+    <script>
+        const image = document.querySelector("img");
+
+    function imageToggler() {
+  let isTrue = false;
+
+  setInterval(() => {
+    if (isTrue) {
+      image.setAttribute(
+        "src",
+        "https://images.unsplash.com/photo-1608889336076-13c5c2dc1ee7?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fHw%3D"
+      );
+    } else {
+      image.setAttribute(
+        "src",
+        "https://images.unsplash.com/photo-1608889476561-6242cfdbf622?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fHw%3D"
+      );
+    }
+    isTrue = !isTrue;
+  }, 1000);
+}
+imageToggler();
+    </script>
+</body>
+
+</html>
